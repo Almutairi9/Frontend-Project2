@@ -23,11 +23,11 @@ I use standard Express parameters. “req” is for the request object. This is 
 I have installed react node js and some packages for express node js. 
 I have installed some packages from bootstrap for our design.
 
-Install Cap2-Frontend with npm
+Install Frontend-Project2 with npm
 
 ```bash
-  git clone for Cap2-Frontend 
-  cd Cap2-Frontend  
+  git clone for Frontend-Project2 
+  cd Frontend-Project2  
   npm i react-scripts
   npm i react-router-dom
   npm start 
@@ -59,7 +59,7 @@ Clone the project
 Go to the Frontend-Project2 directory
 
 ```bash
-  cd Cap2-Frontend
+  cd Frontend-Project2
 ```
 
 Install dependencies
