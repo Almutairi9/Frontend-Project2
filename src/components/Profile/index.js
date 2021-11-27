@@ -29,7 +29,6 @@ const Profile = () => {
         },
       };
       setLoading(true);
-      // const updatedProfile = userInfo.userName._id;
       console.log(userInfo._id);
       const { data } = await axios.put(
         `https://backend-project2.herokuapp.com/users/update/${userInfo._id}`,

@@ -49,7 +49,6 @@ const Login = () => {
 
       console.log(data);
       localStorage.setItem("userInfo", JSON.stringify(data));
-      // navigate('/News');  Not working ... !!!! 
       setLoading(false);
       navigate('/News');
     } catch (error) {

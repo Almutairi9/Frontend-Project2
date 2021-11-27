@@ -17,7 +17,7 @@ const Nav = () => {
     <div>
       <header className="header">
         <nav className="navbar">
-          <img src="Newss.jpg" alt="News Logo" className="nav-logo"/>
+          <img src="/Newss.jpg" alt="News Logo" className="nav-logo"/>
           <ul className="nav-menu">
             <li className="nav-item">
               <button

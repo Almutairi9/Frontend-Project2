@@ -9,6 +9,7 @@ import Landpage from "./components/LandPage";
 import News from "./components/News"; 
 
 function App() {
+  const userInfo = localStorage.getItem("userInfo");
   return (
     <div>
     
