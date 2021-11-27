@@ -111,8 +111,12 @@ const Profile = () => {
             onChange={(e) => setAge(e.target.value)}
           />
           <hr />
-          <button type="submit" className="registerbtn">
-            update
+          <button
+            onClick={() => navigate(`/News`)}
+            type="submit"
+            className="registerbtn"
+          >
+            update Profile
           </button>
         </form>
       </div>
