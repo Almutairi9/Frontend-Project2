@@ -53,10 +53,10 @@ PORT `5000`
 Clone the project
 
 ```bash
-  git clone https://github.com/group8-tuwaiq/Cap2-Frontend.git
+  git clone https://github.com/Frontend-Project2.git
 ```
 
-Go to the Cap2-Frontend directory
+Go to the Frontend-Project2 directory
 
 ```bash
   cd Cap2-Frontend
