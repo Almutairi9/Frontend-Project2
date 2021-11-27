@@ -5,14 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer";
 import { Card, Spinner } from "react-bootstrap";
 const News = () => {
-  const navigate = useNavigate();
 
-  const logOut = () => {
-    navigate(`/`);
-    localStorage.clear(); 
-    window.location.reload(false);
-    console.log("log out");
-  };
   const [cards, setCards] = useState([]);
 
   useEffect(() => {

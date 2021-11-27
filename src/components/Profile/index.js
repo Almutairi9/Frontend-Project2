@@ -45,7 +45,7 @@ const Profile = () => {
       setLoading(false);
 
       localStorage.setItem("userInfo", JSON.stringify(data));
-      navigate("/News");
+      navigate("/");
     } catch (error) {
       setError(error.response.data.message);
     }
