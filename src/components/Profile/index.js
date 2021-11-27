@@ -39,13 +39,13 @@ const Profile = () => {
           phoneNumber,
           age,
         },
-        config
+        config 
       );
       console.log(data);
       setLoading(false);
 
       localStorage.setItem("userInfo", JSON.stringify(data));
-      navigate("/");
+      navigate("News");
     } catch (error) {
       setError(error.response.data.message);
     }

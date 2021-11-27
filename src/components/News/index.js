@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 import Nav from "../../components/Nav";
-import { useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer";
 import { Card, Spinner } from "react-bootstrap";
 const News = () => {
-
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
