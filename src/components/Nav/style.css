@@ -10,7 +10,7 @@ li {
   }
   
   .navbar {
-    background-image: ("/Newss.jpg");
+    /* background-image: ("/Newss.jpg"); */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,7 +18,7 @@ li {
   }
   .hamburger {
     display: none;
-  }
+  } 
   
   /* .bar {
     display: block;
@@ -48,23 +48,7 @@ li {
   .nav-link:hover {
     color: #1de6cb;
   }
+  .nav-logo{
+    width: 15%;
+  }
   
-  a.btn{
-    
-    display: inline-block;
-    Padding: 0.35em 1.2em;
-    border:0.1em solid #FFFFFF;
-    margin:0px 1.3em -0.7em 20px;
-    border-radius:0.12em;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family:'Roboto',sans-serif;
-    font-weight:300;
-    color:#FFFFFF;
-    text-align:center;
-    transition: all 0.2s; }
-
-    a.btn:hover{
-    color:#000000;
-    background-color:#FFFFFF;
-    }
