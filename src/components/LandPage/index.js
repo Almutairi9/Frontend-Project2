@@ -2,7 +2,6 @@ import React from "react";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-// import { Card } from "react-bootstrap";
 
 const Landpage = () => {
   const navigate = useNavigate();
@@ -15,9 +14,16 @@ const Landpage = () => {
           alt="landpic"
         />
         <div class="top-right">
-        Technology Apps Get all the latest news and details of Technology News from India and across the world on mint. Let's Connect Now!<br/><br/>
-          <Link to="/Signup" class="btn">Sign up</Link>
-          <Link to="/Login" class="btn">Login </Link>
+          Technology Apps Get all the latest news and details of Technology News
+          from India and across the world on mint. Let's Connect Now!
+          <br />
+          <br />
+          <Link to="/Signup" class="btn">
+            Sign up
+          </Link>
+          <Link to="/Login" class="btn">
+            Login{" "}
+          </Link>
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./style.css";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import { Card, Spinner } from "react-bootstrap";
@@ -18,7 +17,7 @@ const News = () => {
   return (
     <div>
       <Nav />
-      {/* <br /> */}
+
       <div className="cards">
         {cards.length ? (
           <ul>

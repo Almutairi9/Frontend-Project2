@@ -3,8 +3,6 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import { useState } from "react";
-// import Loading from "../Loading/loading";
-// import ErrorMessage from "../errorMessage";
 import "./style.css";
 
 const Profile = () => {
@@ -39,7 +37,7 @@ const Profile = () => {
           phoneNumber,
           age,
         },
-        config 
+        config
       );
       console.log(data);
       setLoading(false);
@@ -54,8 +52,6 @@ const Profile = () => {
   return (
     <Container>
       <div className="container">
-        {/* {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
-          {loading && <Loading />} */}
         <form className="login" onSubmit={SubmitHandler}>
           <h1>Profile Page </h1>
 
@@ -114,18 +110,6 @@ const Profile = () => {
             id="Age"
             onChange={(e) => setAge(e.target.value)}
           />
-          {/* <label for="img">
-            <b>Select image:</b>
-          </label>
-          <input
-            type="file"
-            value={pic}
-            id="img"
-            name="img"
-            accept="image/*"
-            onChange={(e) => setPic(e.target.value)}
-          />{" "}
-          <input type="submit" /> */}
           <hr />
           <button type="submit" className="registerbtn">
             update

@@ -6,7 +6,7 @@ import Loading from "../Loading/loading";
 import ErrorMessage from "../errorMessage";
 import "./style.css";
 
-const Signup = () => { 
+const Signup = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [userName, setName] = useState("");
@@ -16,8 +16,6 @@ const Signup = () => {
   const [phone, setPhone] = useState("");
   const [age, setAge] = useState("");
   const [password, setPassword] = useState("");
-  // const [message, setMessage] = useState(null);
-  const [picMessage, setpicMessage] = useState(null); // error for sitting pic
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -32,7 +30,6 @@ const Signup = () => {
     }
   }, []);
 
-  /////////////
   const SubmitHandler = async (e) => {
     e.preventDefault();
     console.log(email);
@@ -61,33 +58,6 @@ const Signup = () => {
       localStorage.setItem("userInfo", JSON.stringify(data));
     } catch (error) {
       setError(error.response.data.message);
-    }
-  };
-
-  const postDetails = (pics) => {
-    if (pics === undefined) {
-      return setpicMessage("please Select an Image");
-    }
-    setpicMessage(null);
-    if (pics.type === "image/jpeg" || pics.type === "image/png") {
-      const data = new FormData();
-      data.append("file", pics);
-      // data.append('upload_preset', 'newsProject')
-      // data.append('cloud_name', 'username جنب السهم')
-      fetch("", {
-        method: "post",
-        body: data,
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-          setPic(data.url.toString());
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    } else {
-      return setpicMessage("please Select an Image");
     }
   };
 
@@ -159,18 +129,6 @@ const Signup = () => {
           required
           onChange={(e) => setAge(e.target.value)}
         />
-        {/* <label for="img">
-          <b>Select image:</b>
-        </label>
-        <input
-          type="file"
-          value={pic}
-          id="img"
-          name="img"
-          accept="image/*"
-          onChange={(e) => setPic(e.target.value)}
-        />{" "}
-        <input type="submit" /> */}
         <hr />
         <button type="submit" className="registerbtn">
           signin
@@ -178,7 +136,9 @@ const Signup = () => {
         <div className="container signin">
           <p>
             Already have an account?{" "}
-            <button className="log"onClick={() => navigate(`/Login`)}>Login </button>
+            <button className="log" onClick={() => navigate(`/Login`)}>
+              Login{" "}
+            </button>
           </p>
         </div>
       </form>

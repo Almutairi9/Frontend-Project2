@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Loading from "../Loading/loading"; 
+import Loading from "../Loading/loading";
 import ErrorMessage from "../errorMessage";
 import "./style.css";
 
@@ -11,21 +11,16 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
-  // const [message, setMessage] = useState(null);
   const [loading, setLoading] = useState(false);
-
-  /////////////// to news page
 
   useEffect(() => {
     ///// Hocks
     const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
     if (userInfo) {
-      navigate("/News"); ///// news page
-    } 
+      navigate("/News");
+    }
   }, []);
-
-  //////////////////
 
   const SubmitHandler = async (e) => {
     e.preventDefault();
@@ -50,7 +45,7 @@ const Login = () => {
       console.log(data);
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
-      navigate('/News');
+      navigate("/News");
     } catch (error) {
       setError(error.response.data.message);
       setLoading(false);
