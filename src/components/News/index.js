@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
-import { Card, Spinner } from "react-bootstrap";
+import { Card, Container, Spinner } from "react-bootstrap";
+import "./style.css";
 const News = () => {
   const [cards, setCards] = useState([]);
 
@@ -18,39 +19,40 @@ const News = () => {
     <div>
       <Nav />
 
-      <div className="cards">
-        {cards.length ? (
-          <ul>
-            {cards.map((cardd, i) => (
-              <div key={i}>
-                <br />
-                <Card style={({ width: "70rem" }, { margin: "16px" })}>
-                  <Card.Body>
-                    <Card.Title>
-                      <li>{cardd.title}</li>
-                    </Card.Title>
-                    <Card.Text>{cardd.content}</Card.Text>
-                    <Card.Link href="#">{cardd.url}</Card.Link>
-                    <br />
-                    <Card.Link href="#">{cardd.imageUrl}</Card.Link>
-                  </Card.Body>
-                  <Card.Footer className="text-muted">
-                    Author: {cardd.author}
-                  </Card.Footer>
-                  <Card.Footer className="text-muted">
-                    Date: {cardd.date}
-                    <br />
-                    Time: {cardd.time}
-                  </Card.Footer>
-                </Card>
-              </div>
-            ))}
-          </ul>
-        ) : (
-          <Spinner animation="border" variant="primary" />
-        )}
-      </div>
-
+      <Container>
+        <div className="cards">
+          {cards.length ? (
+            <ul>
+              {cards.map((cardd, i) => (
+                <div key={i}>
+                  <br />
+                  <Card style={({ width: "70rem" }, { margin: "16px" })}>
+                    <Card.Body>
+                      <Card.Title>
+                        <li>{cardd.title}</li>
+                      </Card.Title>
+                      <Card.Text>{cardd.content}</Card.Text>
+                      <Card.Link href="#">{cardd.url}</Card.Link>
+                      <br />
+                      <Card.Link href="#">{cardd.imageUrl}</Card.Link>
+                    </Card.Body>
+                    <Card.Footer className="text-muted">
+                      Author: {cardd.author}
+                    </Card.Footer>
+                    <Card.Footer className="text-muted">
+                      Date: {cardd.date}
+                      <br />
+                      Time: {cardd.time}
+                    </Card.Footer>
+                  </Card>
+                </div>
+              ))}
+            </ul>
+          ) : (
+            <div class="spinner-border text-primary"></div>
+          )}
+        </div>
+      </Container>
       <Footer />
     </div>
   );

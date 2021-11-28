@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Loading from "../Loading/loading";
 import ErrorMessage from "../errorMessage";
 import "./style.css";
@@ -10,9 +10,9 @@ const Signup = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [userName, setName] = useState("");
-  const [pic, setPic] = useState(
-    "https://thumbs.dreamstime.com/b/female-user-avatar-profile-picture-icon-isolated-vector-illustration-flat-design-people-character-white-background-woman-146472409.jpg"
-  );
+  // const [pic, setPic] = useState(
+  //   "https://thumbs.dreamstime.com/b/female-user-avatar-profile-picture-icon-isolated-vector-illustration-flat-design-people-character-white-background-woman-146472409.jpg"
+  // );
   const [phone, setPhone] = useState("");
   const [age, setAge] = useState("");
   const [password, setPassword] = useState("");
@@ -28,7 +28,7 @@ const Signup = () => {
     if (userInfo) {
       navigate("/News"); ///// news page
     }
-  }, []);
+  },);
 
   const SubmitHandler = async (e) => {
     e.preventDefault();
@@ -42,7 +42,7 @@ const Signup = () => {
       setLoading(true);
 
       const { data } = await axios.post(
-        "https://backend-project2.herokuapp.com/users",
+        "http://localhost:5000/users", 
         {
           userName,
           email,

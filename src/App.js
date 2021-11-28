@@ -15,15 +15,13 @@ function App() {
       {userInfo ? (
         <>
           <Routes>
-            <Route exact path="/" element={<Landpage />} />
-            {/* <Route exact path="/News" element={<Nav />} />   */}
-            {/* <Route exact path="/News" element={<Footer />} />   */}
             <Route exact path="/Profile" element={<Profile />} />
             <Route exact path="/News" element={<News />} />
           </Routes>
         </>
       ) : (
-        <Routes>
+        <Routes> 
+          <Route exact path="/" element={<Landpage />} />
           <Route exact path="/Signup" element={<Signup />} />
           <Route exact path="/Login" element={<Login />} />
         </Routes>

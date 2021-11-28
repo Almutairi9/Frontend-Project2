@@ -15,11 +15,11 @@ const Nav = () => {
     <div>
       <header className="header">
         <nav className="navbar">
-          <img src="/Newss.jpg" alt="News Logo" className="nav-logo" />
+          <img src="/Newss.jpg" className="nav-logo" />  
           <ul className="nav-menu">
             <li className="nav-item">
               <button
-                class="btn btn-primary"
+                className="btn btn-primary"
                 type="submit"
                 onClick={() => navigate(`/Profile`)}
               >
@@ -27,7 +27,7 @@ const Nav = () => {
               </button>
             </li>
             <li className="nav-item">
-              <button class="btn btn-primary" type="submit" onClick={logOut}>
+              <button className="btn btn-primary" type="submit" onClick={logOut}>
                 Log out
               </button>
             </li>

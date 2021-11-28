@@ -20,7 +20,7 @@ const Login = () => {
     if (userInfo) {
       navigate("/News");
     }
-  }, []);
+  }, ); 
 
   const SubmitHandler = async (e) => {
     e.preventDefault();
@@ -34,7 +34,7 @@ const Login = () => {
       setLoading(true);
 
       const { data } = await axios.post(
-        "https://backend-project2.herokuapp.com/users/login",
+        "http://localhost:5000/users/login",
         {
           email,
           password,

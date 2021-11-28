@@ -29,7 +29,7 @@ const Profile = () => {
       setLoading(true);
       console.log(userInfo._id);
       const { data } = await axios.put(
-        `https://backend-project2.herokuapp.com/users/update/${userInfo._id}`,
+        `http://localhost:5000//users/update/${userInfo._id}`,
         {
           userName,
           email,
@@ -61,7 +61,8 @@ const Profile = () => {
           </label>
           <input
             type="text"
-            defultvalue={userName}
+            value={userName}
+            placeholder="Edit Your User Name "
             name="name"
             id="name"
             onChange={(e) => setName(e.target.value)}
@@ -72,7 +73,7 @@ const Profile = () => {
           <input
             type="text"
             value={email}
-            placeholder="Enter Email"
+            placeholder="Edit Your Email"
             name="email"
             id="email"
             onChange={(e) => setEmail(e.target.value)}
@@ -83,7 +84,7 @@ const Profile = () => {
           <input
             type="password"
             value={password}
-            placeholder="Enter Password"
+            placeholder="Edit Your Password"
             name="psw"
             id="psw"
             onChange={(e) => setPassword(e.target.value)}
@@ -94,7 +95,7 @@ const Profile = () => {
           <input
             type="text"
             value={phoneNumber}
-            placeholder="Enter phone"
+            placeholder="Edit Your phone"
             name="pho"
             id="pho"
             onChange={(e) => setPhone(e.target.value)}
@@ -105,7 +106,7 @@ const Profile = () => {
           <input
             type="text"
             value={age}
-            placeholder="Enter Age"
+            placeholder="Edit Your Age"
             name="Age"
             id="Age"
             onChange={(e) => setAge(e.target.value)}

@@ -4,34 +4,17 @@ import "./style.css";
 
 const Footer = () => {
   return (
-    <div class="footer-basic">
+    <div className="footer-basic">
       <footer>
-        <div class="social">
-          <a href="#">
-            <i class="icon ion-social-instagram"></i>
-          </a>
-          <a href="#">
-            <i class="icon ion-social-snapchat"></i>
-          </a>
-          <a href="#">
-            <i class="icon ion-social-twitter"></i>
-          </a>
-          <a href="#">
-            <i class="icon ion-social-facebook"></i>
-          </a>
-        </div>
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <Link to="/">Home</Link>
+        <ul className="list-inline">
+          <li className="list-inline-item">
+            <Link to="/Support">Support</Link>
           </li>
-          <li class="list-inline-item">
-            <Link to="/Profile">Profile</Link>
-          </li>
-          <li class="list-inline-item">
+          <li className="list-inline-item">
             <Link to="/About">About us</Link>
           </li>
         </ul>
-        <p class="copyright">News App © 2021</p>
+        <p className="copyright">News App © 2021</p>
       </footer>
     </div>
   );
