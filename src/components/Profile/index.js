@@ -122,7 +122,7 @@ const Profile = () => {
         </form>
       </div>
     </Container>
-  );
+  ); 
 };
 
 export default Profile;
